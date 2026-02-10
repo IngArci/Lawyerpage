@@ -55,6 +55,8 @@
       },
       "scripts": {
           "dev": "vite",
-          "build": "vite build build --output public"
+          "build": "vite build",
+          "build": "[my-framework] build --output public"
+         
       }
   }
