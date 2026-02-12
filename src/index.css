@@ -87,7 +87,6 @@
     --color-gray-500: oklch(.551 .027 264.364);
     --color-gray-600: oklch(.446 .03 256.802);
     --color-gray-700: oklch(.373 .034 259.733);
-    --color-gray-800: oklch(.278 .033 256.848);
     --color-gray-900: oklch(.21 .034 264.665);
     --color-white: #fff;
     --spacing: .25rem;
@@ -773,16 +772,16 @@
     border-color: var(--color-gray-300);
   }
 
-  .border-gray-800 {
-    border-color: var(--color-gray-800);
-  }
-
   .border-green-600 {
     border-color: var(--color-green-600);
   }
 
   .border-purple-600 {
     border-color: var(--color-purple-600);
+  }
+
+  .border-slate-800 {
+    border-color: var(--color-slate-800);
   }
 
   .border-slate-900 {

@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Abogados de Inmigración</h3>
+            <h3 className="text-xl font-bold mb-4">Unidos Por Inmigración</h3>
             <p className="text-gray-400 mb-4">
               {t("footer.about")}
             </p>
@@ -76,23 +76,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Abogados de Inmigración. {t("footer.rights")}
-            </p>
-            <div className="flex gap-6 text-sm">
-              <Link to="/recursos" className="text-gray-400 hover:text-white transition">
-                {t("nav.recursos")}
-              </Link>
-              <Link to="/oportunidades" className="text-gray-400 hover:text-white transition">
-                {t("nav.trabajo")}
-              </Link>
-              <Link to="/contacto" className="text-gray-400 hover:text-white transition">
-                {t("nav.contacto")}
-              </Link>
-            </div>
-          </div>
+        <div className="border-t border-slate-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+          <p>&copy; {new Date().getFullYear()} Unidos Por Inmigración. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>
