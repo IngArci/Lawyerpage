@@ -1,20 +1,32 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router";
 import { useLanguage } from "../contexts/LanguageContext";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About */}
-          <div className="md:col-span-2">
+          <div>
             <h3 className="text-xl font-bold mb-4">Abogados de Inmigración</h3>
             <p className="text-gray-400 mb-4">
               {t("footer.about")}
             </p>
+            <div className="flex gap-3">
+              <a href="#" className="w-10 h-10 bg-slate-800 hover:bg-amber-600 rounded-full flex items-center justify-center transition">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-slate-800 hover:bg-amber-600 rounded-full flex items-center justify-center transition">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-slate-800 hover:bg-amber-600 rounded-full flex items-center justify-center transition">
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}

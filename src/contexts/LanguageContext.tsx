@@ -24,7 +24,7 @@ const translations = {
     "nav.acerca": "Acerca de Nosotros",
     "nav.abogados": "Abogados",
     "nav.recursos": "Recursos",
-    "nav.trabajo": "Oportunidades de Trabajo",
+    "nav.trabajo": "Oportunidades",
     "nav.contacto": "Contacto",
     
     // Home
@@ -61,7 +61,7 @@ const translations = {
     "nav.acerca": "About Us",
     "nav.abogados": "Attorneys",
     "nav.recursos": "Resources",
-    "nav.trabajo": "Job Opportunities",
+    "nav.trabajo": "Opportunities",
     "nav.contacto": "Contact",
     
     // Home

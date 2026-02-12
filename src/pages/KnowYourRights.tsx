@@ -1,4 +1,5 @@
 import { Shield, Scale, FileText, Users } from "lucide-react";
+import { Link } from "react-router";
 
 export default function KnowYourRights() {
   const rights = [
@@ -33,17 +34,19 @@ export default function KnowYourRights() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white py-20">
+      <section className="bg-slate-900 text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Conoce tus Derechos
-          </h1>
-          <p className="text-xl text-blue-100 max-w-3xl">
-            Es fundamental que conozcas tus derechos como inmigrante en Estados Unidos. 
-            Esta información puede protegerte en situaciones críticas.
-          </p>
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Conoce tus Derechos
+            </h1>
+            <p className="text-xl text-gray-300">
+              Es fundamental que conozcas tus derechos como inmigrante en Estados Unidos. 
+              Esta información puede protegerte en situaciones críticas.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -54,16 +57,23 @@ export default function KnowYourRights() {
             {rights.map((right, index) => {
               const Icon = right.icon;
               return (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-blue-900" />
+                <div 
+                  key={index} 
+                  className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-slate-900 hover:shadow-lg transition"
+                >
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0 w-16 h-16 bg-slate-900 text-white rounded-lg flex items-center justify-center">
+                      <Icon className="w-8 h-8" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                        {right.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {right.description}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    {right.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {right.description}
-                  </p>
                 </div>
               );
             })}
@@ -83,22 +93,24 @@ export default function KnowYourRights() {
             </ul>
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 bg-blue-900 text-white rounded-lg p-12 text-center">
-            <h3 className="text-3xl font-bold mb-4">
-              ¿Necesitas Asesoría Legal?
-            </h3>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Nuestros abogados especializados están listos para ayudarte. 
-              Agenda una consulta gratuita hoy mismo.
-            </p>
-            <a 
-              href="/contacto"
-              className="inline-block bg-white text-blue-900 px-8 py-3 rounded-md hover:bg-blue-50 transition font-semibold"
-            >
-              Consulta Gratuita
-            </a>
-          </div>
+          {/* CTA Section */}
+          <section className="py-16 bg-slate-900 text-white">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                ¿Necesitas Asesoría Legal?
+              </h3>
+              <p className="text-xl text-gray-300 mb-8">
+                Nuestros abogados especializados están listos para ayudarte. 
+                Agenda una consulta gratuita hoy mismo.
+              </p>
+              <Link 
+                to="/contacto"
+                className="inline-block bg-amber-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-amber-700 transition"
+              >
+                Consulta Gratuita
+              </Link>
+            </div>
+          </section>
         </div>
       </section>
     </div>
