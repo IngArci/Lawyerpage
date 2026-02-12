@@ -10,42 +10,42 @@ export default function Home() {
     { 
       title: t("nav.inmigracion.visasEmpleo"), 
       path: "/inmigracion/visas-empleo",
-      description: "Visas H-1B, L-1, O-1, E-2 y más",
+      description: t("home.services.employment"),
       icon: Briefcase
     },
     { 
       title: t("nav.inmigracion.familiar"), 
       path: "/inmigracion/familiar",
-      description: "Reunificación familiar y peticiones",
+      description: t("home.services.family"),
       icon: Users
     },
     { 
       title: t("nav.inmigracion.humanitarias"), 
       path: "/inmigracion/humanitarias",
-      description: "VAWA, U-Visa, T-Visa",
+      description: t("home.services.humanitarian"),
       icon: Shield
     },
     { 
       title: t("nav.inmigracion.defensa"), 
       path: "/inmigracion/defensa-remocion",
-      description: "Defensa en corte de inmigración",
+      description: t("home.services.defense"),
       icon: FileText
     },
     { 
       title: t("nav.inmigracion.asilo"), 
       path: "/inmigracion/asilo",
-      description: "Solicitudes de asilo y refugio",
+      description: t("home.services.asylum"),
       icon: Shield
     },
   ];
 
   const whyChooseUs = [
-    "Más de 15 años de experiencia en derecho de inmigración",
-    "Equipo bilingüe español-inglés",
-    "Atención personalizada para cada caso",
-    "Alta tasa de éxito en casos complejos",
-    "Consulta inicial gratuita",
-    "Planes de pago flexibles disponibles"
+    t("home.whyUs.reason1"),
+    t("home.whyUs.reason2"),
+    t("home.whyUs.reason3"),
+    t("home.whyUs.reason4"),
+    t("home.whyUs.reason5"),
+    t("home.whyUs.reason6")
   ];
 
   return (
@@ -56,24 +56,23 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Expertos en Derecho de Inmigración
+                {t("home.hero.title")}
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Defendemos tus derechos y te guiamos en cada paso del proceso migratorio. 
-                Con más de 15 años de experiencia, somos tu mejor opción para alcanzar el sueño americano.
+                {t("home.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   to="/contacto"
                   className="bg-amber-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-amber-700 transition text-center"
                 >
-                  Consulta Gratuita
+                  {t("home.hero.cta1")}
                 </Link>
                 <a 
                   href="tel:+1234567890"
                   className="border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-slate-900 transition text-center"
                 >
-                  Llamar Ahora
+                  {t("home.hero.cta2")}
                 </a>
               </div>
             </div>
@@ -152,7 +151,7 @@ export default function Home() {
               to="/contacto"
               className="inline-block bg-slate-900 text-white px-8 py-3 rounded-md font-semibold hover:bg-slate-800 transition"
             >
-              Ver Todos los Servicios
+              {t("home.services.viewAll")}
             </Link>
           </div>
         </div>
@@ -233,23 +232,23 @@ export default function Home() {
       <section className="bg-slate-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Tu Futuro Comienza Hoy
+            {t("home.cta.title")}
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            No esperes más para hacer realidad tus sueños. Contáctanos hoy y da el primer paso hacia tu futuro en Estados Unidos.
+            {t("home.cta.subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contacto"
               className="bg-amber-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-amber-700 transition"
             >
-              Agendar Consulta
+              {t("home.cta.button1")}
             </Link>
             <Link 
               to="/abogados"
               className="border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-slate-900 transition"
             >
-              Conoce a Nuestro Equipo
+              {t("home.cta.button2")}
             </Link>
           </div>
         </div>

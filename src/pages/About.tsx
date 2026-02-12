@@ -1,108 +1,118 @@
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { Award, Users, Heart, TrendingUp } from "lucide-react";
+import { Target, Eye, Heart, Award, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function About() {
+  const { t } = useLanguage();
+
   const values = [
     {
       icon: Heart,
-      title: "Compasión",
-      description: "Entendemos que cada caso representa vidas reales y familias que dependen de nosotros.",
+      title: t("about.values.integrity"),
+      description: t("about.values.integrityDesc"),
     },
     {
       icon: Award,
-      title: "Excelencia",
-      description: "Nos esforzamos por brindar el más alto nivel de servicio legal y resultados para nuestros clientes.",
+      title: t("about.values.excellence"),
+      description: t("about.values.excellenceDesc"),
     },
     {
       icon: Users,
-      title: "Dedicación",
-      description: "Estamos comprometidos con cada caso, trabajando incansablemente por los mejores resultados.",
+      title: t("about.values.compassion"),
+      description: t("about.values.compassionDesc"),
     },
     {
       icon: TrendingUp,
-      title: "Experiencia",
-      description: "Más de 15 años navegando las complejidades del sistema de inmigración estadounidense.",
+      title: t("about.values.commitment"),
+      description: t("about.values.commitmentDesc"),
     },
   ];
 
-  const achievements = [
-    { number: "5000+", label: "Casos Exitosos" },
-    { number: "15+", label: "Años de Experiencia" },
-    { number: "98%", label: "Tasa de Satisfacción" },
-    { number: "10000+", label: "Clientes Atendidos" },
-  ];
-
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-20">
+      <section className="bg-slate-900 text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Acerca de Nosotros
-          </h1>
-          <p className="text-xl text-blue-100 max-w-3xl">
-            Somos un bufete de abogados líder en derecho de inmigración, dedicado a 
-            ayudar a individuos, familias y empresas a alcanzar sus sueños en Estados Unidos.
-          </p>
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              {t("about.hero.title")}
+            </h1>
+            <p className="text-xl text-gray-300">
+              {t("about.hero.subtitle")}
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="py-20 bg-white">
+      {/* Mission and Vision Section */}
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Nuestra Historia
-              </h2>
-              <div className="space-y-4 text-gray-700">
-                <p>
-                  Fundado en 2009, nuestro bufete nació de la convicción de que cada persona 
-                  merece la oportunidad de perseguir una vida mejor en Estados Unidos. Comenzamos 
-                  con un pequeño equipo y una gran visión: brindar servicios legales de inmigración 
-                  de la más alta calidad con compasión y dedicación.
-                </p>
-                <p>
-                  A lo largo de más de 15 años, hemos ayudado a miles de familias a reunirse, 
-                  profesionales a construir sus carreras, y personas vulnerables a encontrar 
-                  protección y seguridad. Nuestro éxito se mide no solo en casos ganados, sino 
-                  en las vidas transformadas.
-                </p>
-                <p>
-                  Hoy, somos un equipo de abogados especializados, paralegales experimentados, 
-                  y personal dedicado que habla múltiples idiomas y entiende las necesidades 
-                  únicas de nuestras comunidades diversas.
-                </p>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Mission */}
+            <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-slate-900 text-white rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Target className="w-8 h-8" />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  {t("about.mission.title")}
+                </h2>
               </div>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                {t("about.mission.text")}
+              </p>
             </div>
-            <div>
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1758691736975-9f7f643d178e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBvZmZpY2UlMjB0ZWFtJTIwZGl2ZXJzZXxlbnwxfHx8fDE3NzA3MTI4NjN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Equipo de abogados"
-                className="rounded-lg shadow-xl"
-              />
+
+            {/* Vision */}
+            <div className="bg-slate-50 border-2 border-slate-200 rounded-lg p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-amber-600 text-white rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Eye className="w-8 h-8" />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  {t("about.vision.title")}
+                </h2>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                {t("about.vision.text")}
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Nuestros Valores
+      {/* Story Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+            {t("about.story.title")}
           </h2>
+          <div className="bg-white border-2 border-gray-200 rounded-lg p-8">
+            <p className="text-gray-700 leading-relaxed text-lg">
+              {t("about.story.text")}
+            </p>
+          </div>
+        </div>
+      </section>
 
+      {/* Values Section */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {t("about.values.title")}
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-blue-900" />
+                <div 
+                  key={index}
+                  className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-slate-900 hover:shadow-lg transition text-center"
+                >
+                  <div className="w-16 h-16 bg-slate-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {value.title}
                   </h3>
                   <p className="text-gray-600">
@@ -115,110 +125,29 @@ export default function About() {
         </div>
       </section>
 
-      {/* Achievements */}
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">
-            Nuestros Logros
-          </h2>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl font-bold mb-2">{achievement.number}</div>
-                <div className="text-blue-200">{achievement.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            ¿Por Qué Elegirnos?
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Experiencia Comprobada
-              </h3>
-              <p className="text-gray-700">
-                Más de 15 años manejando exitosamente todo tipo de casos de inmigración, 
-                desde los más simples hasta los más complejos.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Atención Personalizada
-              </h3>
-              <p className="text-gray-700">
-                Cada cliente recibe atención individual. No eres solo un número de caso - 
-                eres parte de nuestra familia.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Comunicación Clara
-              </h3>
-              <p className="text-gray-700">
-                Explicamos cada paso del proceso en tu idioma, sin jerga legal confusa. 
-                Siempre estamos disponibles para tus preguntas.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Servicios en Español
-              </h3>
-              <p className="text-gray-700">
-                Todo nuestro personal habla español fluidamente. Puedes comunicarte 
-                cómodamente en tu idioma natal.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Tarifas Transparentes
-              </h3>
-              <p className="text-gray-700">
-                Sin costos ocultos. Desde el principio sabrás exactamente cuánto 
-                costará tu caso.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Consulta Inicial Gratuita
-              </h3>
-              <p className="text-gray-700">
-                Evaluamos tu caso sin costo. Recibirás asesoría honesta sobre tus 
-                opciones antes de tomar cualquier decisión.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-blue-900 text-white">
+      {/* CTA Section */}
+      <section className="py-16 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-3xl font-bold mb-4">
-            Conoce a Nuestros Abogados
+          <h3 className="text-3xl md:text-4xl font-bold mb-6">
+            Trabajemos Juntos
           </h3>
-          <p className="text-xl text-blue-100 mb-8">
-            Nuestro equipo de abogados especializados está listo para ayudarte.
+          <p className="text-xl text-gray-300 mb-8">
+            Estamos listos para ayudarte a alcanzar tus metas. Contáctanos para una consulta gratuita.
           </p>
-          <Link 
-            to="/abogados"
-            className="inline-block bg-white text-blue-900 px-8 py-3 rounded-md hover:bg-blue-50 transition font-semibold"
-          >
-            Ver Nuestro Equipo
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contacto"
+              className="bg-amber-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-amber-700 transition"
+            >
+              Consulta Gratuita
+            </Link>
+            <Link 
+              to="/abogados"
+              className="border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-slate-900 transition"
+            >
+              Conoce a Nuestro Equipo
+            </Link>
+          </div>
         </div>
       </section>
     </div>

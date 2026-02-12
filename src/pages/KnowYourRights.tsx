@@ -1,36 +1,40 @@
-import { Shield, Scale, FileText, Users } from "lucide-react";
+import { Shield, Scale, FileText, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function KnowYourRights() {
+  const { t } = useLanguage();
+
   const rights = [
     {
       icon: Shield,
-      title: "Derecho a Permanecer en Silencio",
-      titleEn: "Right to Remain Silent",
-      description: "No estás obligado a responder preguntas sobre tu estatus migratorio. Puedes ejercer tu derecho al silencio.",
-      descriptionEn: "You are not required to answer questions about your immigration status. You can exercise your right to remain silent.",
+      title: t("rights.silence.title"),
+      description: t("rights.silence.desc"),
     },
     {
       icon: Scale,
-      title: "Derecho a un Abogado",
-      titleEn: "Right to an Attorney",
-      description: "Tienes derecho a ser representado por un abogado en procedimientos de inmigración.",
-      descriptionEn: "You have the right to be represented by an attorney in immigration proceedings.",
+      title: t("rights.lawyer.title"),
+      description: t("rights.lawyer.desc"),
     },
     {
       icon: FileText,
-      title: "Derecho a Ver una Orden",
-      titleEn: "Right to See a Warrant",
-      description: "Los agentes deben mostrar una orden judicial firmada por un juez para entrar a tu hogar.",
-      descriptionEn: "Agents must show a warrant signed by a judge to enter your home.",
+      title: t("rights.refuse.title"),
+      description: t("rights.refuse.desc"),
     },
     {
       icon: Users,
-      title: "Derecho a Contactar Tu Consulado",
-      titleEn: "Right to Contact Your Consulate",
-      description: "Si eres detenido, tienes derecho a comunicarte con el consulado de tu país.",
-      descriptionEn: "If you are detained, you have the right to contact your country's consulate.",
+      title: t("rights.document.title"),
+      description: t("rights.document.desc"),
     },
+  ];
+
+  const tips = [
+    t("rights.tips.calm"),
+    t("rights.tips.rights"),
+    t("rights.tips.document"),
+    t("rights.tips.info"),
+    t("rights.tips.lawyer"),
+    t("rights.tips.silent"),
   ];
 
   return (
@@ -40,19 +44,22 @@ export default function KnowYourRights() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Conoce tus Derechos
+              {t("rights.hero.title")}
             </h1>
             <p className="text-xl text-gray-300">
-              Es fundamental que conozcas tus derechos como inmigrante en Estados Unidos. 
-              Esta información puede protegerte en situaciones críticas.
+              {t("rights.hero.subtitle")}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Rights Cards */}
-      <section className="py-20">
+      {/* Rights Section */}
+      <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {t("rights.section.title")}
+          </h2>
+
           <div className="grid md:grid-cols-2 gap-8">
             {rights.map((right, index) => {
               const Icon = right.icon;
@@ -66,10 +73,10 @@ export default function KnowYourRights() {
                       <Icon className="w-8 h-8" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
                         {right.title}
                       </h3>
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-600">
                         {right.description}
                       </p>
                     </div>
@@ -78,39 +85,43 @@ export default function KnowYourRights() {
               );
             })}
           </div>
+        </div>
+      </section>
 
-          {/* Important Information */}
-          <div className="mt-16 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              ⚠️ Información Importante
-            </h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Lleva siempre contigo documentación de inmigración válida</li>
-              <li>• No firmes ningún documento sin leerlo completamente</li>
-              <li>• No proveas información falsa a autoridades de inmigración</li>
-              <li>• Memoriza el número de un abogado o familiar de confianza</li>
-              <li>• Prepara un plan de emergencia para tu familia</li>
-            </ul>
-          </div>
-
-          {/* CTA Section */}
-          <section className="py-16 bg-slate-900 text-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6">
-                ¿Necesitas Asesoría Legal?
-              </h3>
-              <p className="text-xl text-gray-300 mb-8">
-                Nuestros abogados especializados están listos para ayudarte. 
-                Agenda una consulta gratuita hoy mismo.
-              </p>
-              <Link 
-                to="/contacto"
-                className="inline-block bg-amber-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-amber-700 transition"
-              >
-                Consulta Gratuita
-              </Link>
+      {/* Tips Section */}
+      <section className="py-16 md:py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {t("rights.tips.title")}
+          </h2>
+          <div className="bg-white border-2 border-gray-200 rounded-lg p-8">
+            <div className="space-y-3">
+              {tips.map((tip, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{tip}</span>
+                </div>
+              ))}
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-slate-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-3xl md:text-4xl font-bold mb-6">
+            {t("rights.cta.title")}
+          </h3>
+          <p className="text-xl text-gray-300 mb-8">
+            {t("rights.cta.subtitle")}
+          </p>
+          <Link 
+            to="/contacto"
+            className="inline-block bg-amber-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-amber-700 transition"
+          >
+            {t("rights.cta.button")}
+          </Link>
         </div>
       </section>
     </div>
