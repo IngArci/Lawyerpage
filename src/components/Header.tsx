@@ -46,51 +46,51 @@ export default function Header() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-6">
-            <Link to="/" className="text-gray-700 hover:text-blue-900 transition">
+            <Link to="/" className="text-gray-700 hover:text-blue-900 transition whitespace-nowrap">
               {t("nav.inicio")}
             </Link>
             
-            <Link to="/conoce-tus-derechos" className="text-gray-700 hover:text-blue-900 transition">
+            <Link to="/conoce-tus-derechos" className="text-gray-700 hover:text-blue-900 transition whitespace-nowrap">
               {t("nav.derechos")}
             </Link>
 
             {/* Immigration Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 hover:text-blue-900 transition flex items-center gap-1">
+              <button className="text-gray-700 hover:text-blue-900 transition flex items-center gap-1 whitespace-nowrap">
                 {t("nav.inmigracion")}
                 <ChevronDown className="w-4 h-4" />
               </button>
               <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <Link to="/inmigracion/visas-empleo" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900">
+                <Link to="/inmigracion/visas-empleo" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 whitespace-nowrap">
                   {t("nav.inmigracion.visasEmpleo")}
                 </Link>
-                <Link to="/inmigracion/familiar" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900">
+                <Link to="/inmigracion/familiar" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 whitespace-nowrap">
                   {t("nav.inmigracion.familiar")}
                 </Link>
-                <Link to="/inmigracion/humanitarias" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900">
+                <Link to="/inmigracion/humanitarias" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 whitespace-nowrap">
                   {t("nav.inmigracion.humanitarias")}
                 </Link>
-                <Link to="/inmigracion/defensa-remocion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900">
+                <Link to="/inmigracion/defensa-remocion" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 whitespace-nowrap">
                   {t("nav.inmigracion.defensa")}
                 </Link>
-                <Link to="/inmigracion/asilo" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900">
+                <Link to="/inmigracion/asilo" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 whitespace-nowrap">
                   {t("nav.inmigracion.asilo")}
                 </Link>
               </div>
             </div>
 
-            <Link to="/acerca" className="text-gray-700 hover:text-blue-900 transition">
+            <Link to="/acerca" className="text-gray-700 hover:text-blue-900 transition whitespace-nowrap">
               {t("nav.acerca")}
             </Link>
 
             {/* Attorneys Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 hover:text-blue-900 transition flex items-center gap-1">
+              <button className="text-gray-700 hover:text-blue-900 transition flex items-center gap-1 whitespace-nowrap">
                 {t("nav.abogados")}
                 <ChevronDown className="w-4 h-4" />
               </button>
               <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <Link to="/abogados" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 font-semibold">
+                <Link to="/abogados" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 font-semibold whitespace-nowrap">
                   Ver Todos
                 </Link>
                 <div className="border-t my-1"></div>
@@ -98,7 +98,7 @@ export default function Header() {
                   <Link 
                     key={attorney.id}
                     to={`/abogados/${attorney.id}`} 
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900 whitespace-nowrap"
                   >
                     {attorney.name}
                   </Link>
@@ -106,22 +106,22 @@ export default function Header() {
               </div>
             </div>
 
-            <Link to="/recursos" className="text-gray-700 hover:text-blue-900 transition">
+            <Link to="/recursos" className="text-gray-700 hover:text-blue-900 transition whitespace-nowrap">
               {t("nav.recursos")}
             </Link>
 
-            <Link to="/oportunidades" className="text-gray-700 hover:text-blue-900 transition">
+            <Link to="/oportunidades" className="text-gray-700 hover:text-blue-900 transition whitespace-nowrap">
               {t("nav.trabajo")}
             </Link>
 
-            <Link to="/contacto" className="bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition">
+            <Link to="/contacto" className="bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition whitespace-nowrap">
               {t("nav.contacto")}
             </Link>
 
             {/* Language Toggle */}
             <button 
               onClick={toggleLanguage}
-              className="border-2 border-blue-900 text-blue-900 px-4 py-2 rounded-md hover:bg-blue-900 hover:text-white transition font-semibold"
+              className="border-2 border-blue-900 text-blue-900 px-4 py-2 rounded-md hover:bg-blue-900 hover:text-white transition font-semibold whitespace-nowrap"
             >
               {language === "es" ? "EN" : "ES"}
             </button>
