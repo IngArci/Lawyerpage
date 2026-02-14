@@ -159,6 +159,7 @@ const translations = {
     "contact.urgent.title": "⚡ Casos Urgentes",
     "contact.urgent.description": "Si tienes una orden de deportación, audiencia programada, o cualquier situación urgente, llámanos inmediatamente:",
     "contact.map.title": "Mapa de ubicación",
+    "contact.map.directions": "Obtener Direcciones",
   },
   en: {
     // Header
@@ -308,6 +309,7 @@ const translations = {
     "contact.urgent.title": "⚡ Urgent Cases",
     "contact.urgent.description": "If you have a deportation order, scheduled hearing, or any urgent situation, call us immediately:",
     "contact.map.title": "Location Map",
+    "contact.map.directions": "Get Directions",
   },
 };
 

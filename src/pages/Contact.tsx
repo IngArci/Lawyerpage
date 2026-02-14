@@ -345,15 +345,42 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map Section - Placeholder */}
+      {/* Map Section */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-              <p className="text-gray-600 font-semibold">{t("contact.map.title")}</p>
-              <p className="text-sm text-gray-500">1050 Connecticut Ave NW #500</p>
-              <p className="text-sm text-gray-500">Washington, DC 20036</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            {t("contact.map.title")}
+          </h2>
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <div className="w-full h-96 rounded-lg overflow-hidden">
+              <iframe
+                title="Ubicación de Unidos Por Inmigración"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.824744838383!2d-77.04533968472654!3d38.90563997956896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bdb2b5e08d%3A0x8e0d4b0b5e5c5c5c!2s1050%20Connecticut%20Ave%20NW%20%23500%2C%20Washington%2C%20DC%2020036!5e0!3m2!1ses!2sus!4v1710000000000!5m2!1ses!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-semibold text-gray-900">1050 Connecticut Ave NW #500</p>
+                  <p className="text-gray-600">Washington, DC 20036</p>
+                </div>
+              </div>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=1050+Connecticut+Ave+NW+500,Washington,DC+20036"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-semibold transition flex items-center gap-2"
+              >
+                <MapPin className="w-5 h-5" />
+                {t("contact.map.directions") || "Obtener Direcciones"}
+              </a>
             </div>
           </div>
         </div>
