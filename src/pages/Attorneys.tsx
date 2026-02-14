@@ -3,8 +3,6 @@ import { Mail, Phone, MapPin, GraduationCap } from "lucide-react";
 import { Link } from "react-router";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "motion/react";
-import juanImg from "../assets/abogado-juan-mendoza.jpeg";
-
 
 export default function Attorneys() {
   const { language } = useLanguage();
@@ -19,7 +17,7 @@ export default function Attorneys() {
       phone: "+1 (856) 683-0506",
       email: "Carlose.casstro@gmail.com",
       education: "Texas Southern University - J.D.",
-      image: "https://images.unsplash.com/photo-1722938203650-99afb12419f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaXNwYW5pYyUyMG1hbGUlMjBsYXd5ZXIlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMHN1aXR8ZW58MXx8fHwxNzcxMDM1ODU4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "",
       shortBio: language === "es" 
         ? "Dedicado a ayudar a quienes residen en Estados Unidos con sus problemas de inmigración. Hijo de inmigrantes hondureños, comprende plenamente la difícil situación de los inmigrantes." 
         : "Dedicated to helping those residing in the United States with their immigration issues. Son of Honduran immigrants, he fully understands the difficult situation of immigrants.",
@@ -36,7 +34,7 @@ export default function Attorneys() {
       phone: "+1 (607) 200-1928",
       email: "de.abogadoalejandrocamachoo@gmail.com",
       education: language === "es" ? "Universidad de California - Colegio de Abogados" : "University of California - Bar Association",
-      image: "https://images.unsplash.com/photo-1680540692052-79fde1108370?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXRpbm8lMjBhdHRvcm5leSUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90JTIwYnVzaW5lc3N8ZW58MXx8fHwxNzcxMDM1ODU5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "",
       shortBio: language === "es"
         ? "Especialista en Derecho Migratorio & Derecho Internacional. Comprometido con la defensa y protección de los derechos de quienes enfrentan procesos migratorios."
         : "Specialist in Immigration Law & International Law. Committed to defending and protecting the rights of those facing immigration processes.",
@@ -53,7 +51,7 @@ export default function Attorneys() {
       phone: "+1 (302) 878-2933",
       email: "liclilianavasquez@gmail.com",
       education: language === "es" ? "Colegio de Abogados del Estado de Texas" : "State Bar of Texas",
-      image: "https://images.unsplash.com/photo-1692459411840-f396f46a0524?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXRpbmElMjBmZW1hbGUlMjBsYXd5ZXIlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzEwMzU4NTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "",
       shortBio: language === "es"
         ? "Cuenta con una sólida formación jurídica y amplia experiencia, destacándose por su compromiso ético, enfoque estratégico y vocación de servicio."
         : "She has solid legal training and extensive experience, standing out for her ethical commitment, strategic approach and vocation of service.",
@@ -70,7 +68,7 @@ export default function Attorneys() {
       phone: "+1 (217) 703-0223",
       email: "licjuanmendoza8118@gmail.com",
       education: "William Mitchell College of Law - J.D.",
-      image: juanImg,
+      image: "figma:asset/9e615933fe0614453508c4e5d9ef813465452b61.png",
       shortBio: language === "es"
         ? "30 años de experiencia ejerciendo la profesión de derecho en Florida. Especialista en casos de inmigración en todas las áreas."
         : "30 years of experience practicing law in Florida. Specialist in immigration cases in all areas.",

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion, AnimatePresence } from "motion/react";
-import logo from "../assets/logo.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,11 +43,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <img
-              src={logo}
-              alt="Unidos Por Inmigración"
-              className="h-16 md:h-20 lg:h-24 object-contain"
-            />
+            <h1 className="text-2xl font-bold text-slate-900">Unidos Por Inmigración</h1>
           </Link>
 
           {/* Desktop Menu */}
@@ -56,7 +51,7 @@ export default function Header() {
             <Link to="/" className="text-gray-700 hover:text-slate-900 transition whitespace-nowrap">
               {t("nav.inicio")}
             </Link>
-
+            
             <Link to="/conoce-tus-derechos" className="text-gray-700 hover:text-slate-900 transition whitespace-nowrap">
               {t("nav.derechos")}
             </Link>
@@ -83,6 +78,9 @@ export default function Header() {
                 <Link to="/inmigracion/asilo" className="block px-4 py-2 text-gray-700 hover:bg-slate-50 hover:text-slate-900 whitespace-nowrap">
                   {t("nav.inmigracion.asilo")}
                 </Link>
+                <Link to="/inmigracion/residencias" className="block px-4 py-2 text-gray-700 hover:bg-slate-50 hover:text-slate-900 whitespace-nowrap">
+                  {language === "es" ? "Residencias (Green Card)" : "Residency (Green Card)"}
+                </Link>
               </div>
             </div>
 
@@ -98,9 +96,9 @@ export default function Header() {
                 </Link>
                 <div className="border-t my-1"></div>
                 {attorneys.map((attorney) => (
-                  <Link
+                  <Link 
                     key={attorney.id}
-                    to={`/abogados/${attorney.id}`}
+                    to={`/abogados/${attorney.id}`} 
                     className="block px-4 py-2 text-gray-700 hover:bg-slate-50 hover:text-slate-900 whitespace-nowrap"
                   >
                     {attorney.name}
@@ -114,7 +112,7 @@ export default function Header() {
             </Link>
 
             {/* Language Toggle */}
-            <button
+            <button 
               onClick={toggleLanguage}
               className="border-2 border-slate-900 text-slate-900 px-4 py-2 rounded-md hover:bg-slate-900 hover:text-white transition font-semibold whitespace-nowrap"
             >
@@ -123,7 +121,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden text-gray-700"
           >
@@ -134,7 +132,7 @@ export default function Header() {
         {/* Mobile Menu */}
         <AnimatePresence>
           {mobileMenuOpen && (
-            <motion.div
+            <motion.div 
               className="lg:hidden mt-4 pb-4 flex flex-col gap-4"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
@@ -144,14 +142,14 @@ export default function Header() {
               <Link to="/" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-slate-900 transition">
                 {t("nav.inicio")}
               </Link>
-
+              
               <Link to="/conoce-tus-derechos" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-slate-900 transition">
                 {t("nav.derechos")}
               </Link>
 
               {/* Immigration Mobile Dropdown */}
               <div>
-                <button
+                <button 
                   onClick={() => setImmigrationOpen(!immigrationOpen)}
                   className="text-gray-700 hover:text-slate-900 transition flex items-center gap-1 w-full"
                 >
@@ -175,13 +173,16 @@ export default function Header() {
                     <Link to="/inmigracion/asilo" onClick={() => setMobileMenuOpen(false)} className="block text-gray-600 hover:text-slate-900">
                       {t("nav.inmigracion.asilo")}
                     </Link>
+                    <Link to="/inmigracion/residencias" onClick={() => setMobileMenuOpen(false)} className="block text-gray-600 hover:text-slate-900">
+                      {language === "es" ? "Residencias (Green Card)" : "Residency (Green Card)"}
+                    </Link>
                   </div>
                 )}
               </div>
 
               {/* Attorneys Mobile Dropdown */}
               <div>
-                <button
+                <button 
                   onClick={() => setAttorneysOpen(!attorneysOpen)}
                   className="text-gray-700 hover:text-slate-900 transition flex items-center gap-1 w-full"
                 >
@@ -194,7 +195,7 @@ export default function Header() {
                       {t("nav.abogados")}
                     </Link>
                     {attorneys.map((attorney) => (
-                      <Link
+                      <Link 
                         key={attorney.id}
                         to={`/abogados/${attorney.id}`}
                         onClick={() => setMobileMenuOpen(false)}
@@ -211,7 +212,7 @@ export default function Header() {
                 {t("nav.contacto")}
               </Link>
 
-              <button
+              <button 
                 onClick={toggleLanguage}
                 className="border-2 border-slate-900 text-slate-900 px-4 py-2 rounded-md hover:bg-slate-900 hover:text-white transition font-semibold"
               >

@@ -38,7 +38,7 @@ export default function Home() {
       text: language === "es" 
         ? "Gracias a Unidos Por Inmigración, mi familia finalmente pudo reunirse en Estados Unidos. Su profesionalismo y dedicación fueron excepcionales. Siempre estuvieron disponibles para responder nuestras preguntas y nos guiaron en cada paso del proceso."
         : "Thanks to Unidos Por Inmigración, my family was finally able to reunite in the United States. Their professionalism and dedication were exceptional. They were always available to answer our questions and guided us through every step of the process.",
-      image: "https://images.unsplash.com/photo-1692459411840-f396f46a0524?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXRpbmElMjB3b21hbiUyMHByb2Zlc3Npb25hbCUyMGF0dG9ybmV5fGVufDF8fHx8MTc3MTAzNDkyOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "",
       rating: 5
     },
     {
@@ -47,7 +47,7 @@ export default function Home() {
       text: language === "es"
         ? "Mi caso de asilo era complejo, pero el equipo de Unidos Por Inmigración luchó incansablemente por mí. Su experiencia y conocimiento del sistema legal de inmigración fue fundamental para ganar mi caso. Los recomiendo al 100%."
         : "My asylum case was complex, but the Unidos Por Inmigración team fought tirelessly for me. Their experience and knowledge of the immigration legal system was fundamental to winning my case. I recommend them 100%.",
-      image: "https://images.unsplash.com/photo-1740485863716-8e1851b6d474?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaXNwYW5pYyUyMG1hbiUyMGJ1c2luZXNzJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MTAzNDkyOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "",
       rating: 5
     },
     {
@@ -56,7 +56,7 @@ export default function Home() {
       text: language === "es"
         ? "Obtuve mi visa de trabajo gracias a su excelente asesoría. El proceso fue más rápido de lo que esperaba y siempre me mantuvieron informada. Su atención personalizada hace toda la diferencia. ¡Estoy muy agradecida!"
         : "I obtained my work visa thanks to their excellent advice. The process was faster than I expected and they always kept me informed. Their personalized attention makes all the difference. I'm very grateful!",
-      image: "https://images.unsplash.com/photo-1729202305341-d146fdea0a03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwd29tYW4lMjBzbWlsaW5nJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcxMDM0OTI4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "",
       rating: 5
     }
   ];

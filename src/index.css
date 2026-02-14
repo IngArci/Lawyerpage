@@ -918,6 +918,10 @@
     border-color: var(--color-red-600);
   }
 
+  .border-slate-200 {
+    border-color: var(--color-slate-200);
+  }
+
   .border-slate-800 {
     border-color: var(--color-slate-800);
   }
