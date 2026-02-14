@@ -17,7 +17,7 @@ export default function Attorneys() {
       phone: "+1 (856) 683-0506",
       email: "Carlose.casstro@gmail.com",
       education: "Texas Southern University - J.D.",
-      image: "",
+      image: "src/assets/abogado-carlos.jpeg",
       shortBio: language === "es" 
         ? "Dedicado a ayudar a quienes residen en Estados Unidos con sus problemas de inmigración. Hijo de inmigrantes hondureños, comprende plenamente la difícil situación de los inmigrantes." 
         : "Dedicated to helping those residing in the United States with their immigration issues. Son of Honduran immigrants, he fully understands the difficult situation of immigrants.",
@@ -34,7 +34,7 @@ export default function Attorneys() {
       phone: "+1 (607) 200-1928",
       email: "de.abogadoalejandrocamachoo@gmail.com",
       education: language === "es" ? "Universidad de California - Colegio de Abogados" : "University of California - Bar Association",
-      image: "",
+      image: "src/assets/abogado-alejandro.jpeg",
       shortBio: language === "es"
         ? "Especialista en Derecho Migratorio & Derecho Internacional. Comprometido con la defensa y protección de los derechos de quienes enfrentan procesos migratorios."
         : "Specialist in Immigration Law & International Law. Committed to defending and protecting the rights of those facing immigration processes.",
@@ -51,7 +51,7 @@ export default function Attorneys() {
       phone: "+1 (302) 878-2933",
       email: "liclilianavasquez@gmail.com",
       education: language === "es" ? "Colegio de Abogados del Estado de Texas" : "State Bar of Texas",
-      image: "",
+      image: "src/assets/abogado-liliana.jpeg",
       shortBio: language === "es"
         ? "Cuenta con una sólida formación jurídica y amplia experiencia, destacándose por su compromiso ético, enfoque estratégico y vocación de servicio."
         : "She has solid legal training and extensive experience, standing out for her ethical commitment, strategic approach and vocation of service.",
@@ -68,7 +68,7 @@ export default function Attorneys() {
       phone: "+1 (217) 703-0223",
       email: "licjuanmendoza8118@gmail.com",
       education: "William Mitchell College of Law - J.D.",
-      image: "figma:asset/9e615933fe0614453508c4e5d9ef813465452b61.png",
+      image: "src/assets/abogado-juan.jpeg",
       shortBio: language === "es"
         ? "30 años de experiencia ejerciendo la profesión de derecho en Florida. Especialista en casos de inmigración en todas las áreas."
         : "30 years of experience practicing law in Florida. Specialist in immigration cases in all areas.",

@@ -3,6 +3,10 @@ import { Mail, Phone, MapPin, GraduationCap, Award, Briefcase, ArrowLeft } from 
 import { Link, useParams, Navigate } from "react-router";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "motion/react";
+import carlosImg from "../assets/abogado-carlos.jpeg";
+import alejandroImg from "../assets/abogado-alejandro.jpeg";
+import lilianaImg from "../assets/abogado-liliana.jpeg";
+import juanImg from "../assets/abogado-juan.jpeg";
 
 export default function AttorneyDetail() {
   const { id } = useParams();
@@ -18,7 +22,7 @@ export default function AttorneyDetail() {
       email: "Carlose.casstro@gmail.com",
       education: "Texas Southern University",
       degree: "Doctor of Jurisprudence/Juris Doctor (J.D.)",
-      image: "",
+      image: carlosImg,
       bio: language === "es"
         ? "Dedicado a ayudar a quienes residen en Estados Unidos con sus problemas de inmigración. Ya sea que busque ayuda para patrocinar a trabajadores esenciales o se enfrente a una deportación, ningún caso es demasiado grande ni demasiado pequeño para nosotros. Hijo de inmigrantes hondureños, se ha convertido en uno de los abogados de inmigración más destacados de San Antonio. Comprende plenamente la difícil situación de los inmigrantes que entran y viven en Estados Unidos y busca proteger sus derechos, demostrando que son parte integral de nuestra sociedad. Al elegir al Sr. Castro para que lo represente, elige a alguien que puede dedicar tiempo a su caso, que comprende su situación y con quien puede desarrollar una conexión personal."
         : "Dedicated to helping those residing in the United States with their immigration issues. Whether you're seeking help sponsoring essential workers or facing deportation, no case is too big or too small for us. Son of Honduran immigrants, he has become one of San Antonio's most prominent immigration attorneys. He fully understands the plight of immigrants entering and living in the United States and seeks to protect their rights, demonstrating they are an integral part of our society. By choosing Mr. Castro to represent you, you choose someone who can dedicate time to your case, understands your situation, and with whom you can develop a personal connection.",
@@ -38,7 +42,7 @@ export default function AttorneyDetail() {
       email: "de.abogadoalejandrocamachoo@gmail.com",
       education: language === "es" ? "Universidad de California" : "University of California",
       degree: language === "es" ? "Colegio de Abogados" : "Bar Association",
-      image: "",
+      image: alejandroImg,
       bio: language === "es"
         ? "Abogado especialista comprometido con la defensa y protección de los derechos de quienes enfrentan procesos migratorios. Mi trayectoria académica y profesional me permite ofrecer una asesoría jurídica rigurosa, precisa y efectiva adaptándose a las necesidades de cada caso. Me encuentro a su disposición para liderar su proceso legal. Compromiso, Experticia y Confianza."
         : "Specialized attorney committed to defending and protecting the rights of those facing immigration processes. My academic and professional background allows me to offer rigorous, precise and effective legal advice adapted to the needs of each case. I am at your disposal to lead your legal process. Commitment, Expertise and Trust.",
@@ -58,7 +62,7 @@ export default function AttorneyDetail() {
       email: "liclilianavasquez@gmail.com",
       education: language === "es" ? "Colegio de Abogados del Estado de Texas" : "State Bar of Texas",
       degree: language === "es" ? "Licenciatura en Derecho" : "Law Degree",
-      image: "",
+      image: lilianaImg,
       bio: language === "es"
         ? "La abogada Liliana Ivette Vázquez cuenta con una sólida formación jurídica y una amplia experiencia en el ejercicio del derecho, destacándose por su compromiso ético, su enfoque estratégico y su vocación de servicio. Su práctica profesional se caracteriza por el acompañamiento responsable y personalizado de cada caso, brindando asesoría clara, honesta y orientada a la protección integral de los derechos de sus clientes. Liliana Ivette Vázquez entiende el derecho como una herramienta de solución, defensa y justicia, donde cada proceso requiere rigor jurídico y sensibilidad humana."
         : "Attorney Liliana Ivette Vázquez has solid legal training and extensive experience in the practice of law, standing out for her ethical commitment, strategic approach and vocation of service. Her professional practice is characterized by responsible and personalized accompaniment of each case, providing clear, honest advice oriented to the integral protection of her clients' rights. Liliana Ivette Vázquez understands law as a tool of solution, defense and justice, where each process requires legal rigor and human sensitivity.",
@@ -79,7 +83,7 @@ export default function AttorneyDetail() {
       education: "William Mitchell College of Law",
       degree: "Juris Doctor (J.D.)",
       additionalEducation: "Cal Poly University Pomona - B.S. in Aerospace Engineering",
-      image: "figma:asset/9e615933fe0614453508c4e5d9ef813465452b61.png",
+      image: juanImg,
       bio: language === "es"
         ? "El abogado Juan J. Mendoza ha estado ejerciendo la profesión de derecho en el estado de Florida durante los últimos 30 años. Mendoza es egresado del Cal Poly University de Pomona con un Grado de Licenciatura (B.S.) en Ingeniería Aeroespacial. El título de Abogado en Leyes (J.D.) lo obtuvo a posterior en el William Mitchell College of Law en St. Paul, Minnesota. Es miembro del Federal District Court para el Southern y Middle District del estado de Florida y es miembro del Eleventh Circuit Court of Appeals. Desde sus inicios Mendoza ha representado a la comunidad en las áreas legales de familia, litigio civiles, casos de bancarrota, casos penales y en especial se ha enfocado fuertemente en casos de inmigración en todos las áreas. Su firma de abogado también tiene la facultad de representar a personas en otras áreas legales como lesiones personales, testamentos, sucesiones, planificación patrimonial, compensación laboral y beneficios del Social Security."
         : "Attorney Juan J. Mendoza has been practicing law in the state of Florida for the past 30 years. Mendoza is a graduate of Cal Poly University Pomona with a Bachelor's Degree (B.S.) in Aerospace Engineering. He subsequently obtained his Juris Doctor (J.D.) from William Mitchell College of Law in St. Paul, Minnesota. He is a member of the Federal District Court for the Southern and Middle Districts of Florida and is a member of the Eleventh Circuit Court of Appeals. Since the beginning, Mendoza has represented the community in legal areas of family law, civil litigation, bankruptcy cases, criminal cases and has especially focused strongly on immigration cases in all areas. His law firm is also authorized to represent people in other legal areas such as personal injury, wills, estates, estate planning, workers' compensation and Social Security benefits.",
