@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import Header from "./Header";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
+import { WhatsAppButton } from "./WhatsAppButton";
 import { LanguageProvider } from "../contexts/LanguageContext";
 
 export default function Root() {
@@ -14,6 +15,7 @@ export default function Root() {
           <Outlet />
         </main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </LanguageProvider>
   );

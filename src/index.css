@@ -70,6 +70,7 @@
     --color-amber-900: oklch(.414 .112 45.904);
     --color-green-50: oklch(.982 .018 155.826);
     --color-green-200: oklch(.925 .084 155.995);
+    --color-green-500: oklch(.723 .219 149.579);
     --color-green-600: oklch(.627 .194 149.214);
     --color-green-800: oklch(.448 .119 151.328);
     --color-slate-50: oklch(.984 .003 247.858);
@@ -88,6 +89,7 @@
     --color-gray-900: oklch(.21 .034 264.665);
     --color-white: #fff;
     --spacing: .25rem;
+    --container-xs: 20rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
     --container-4xl: 56rem;
@@ -417,6 +419,10 @@
     position: absolute;
   }
 
+  .fixed {
+    position: fixed;
+  }
+
   .relative {
     position: relative;
   }
@@ -435,6 +441,14 @@
 
   .top-full {
     top: 100%;
+  }
+
+  .right-6 {
+    right: calc(var(--spacing) * 6);
+  }
+
+  .bottom-6 {
+    bottom: calc(var(--spacing) * 6);
   }
 
   .left-0 {
@@ -666,6 +680,10 @@
 
   .w-full {
     width: 100%;
+  }
+
+  .max-w-0 {
+    max-width: calc(var(--spacing) * 0);
   }
 
   .max-w-2xl {
@@ -946,6 +964,10 @@
 
   .bg-green-50 {
     background-color: var(--color-green-50);
+  }
+
+  .bg-green-500 {
+    background-color: var(--color-green-500);
   }
 
   .bg-red-50 {
@@ -1351,6 +1373,12 @@
   }
 
   @media (hover: hover) {
+    .group-hover\:max-w-xs:is(:where(.group):hover *) {
+      max-width: var(--container-xs);
+    }
+  }
+
+  @media (hover: hover) {
     .group-hover\:text-amber-600:is(:where(.group):hover *) {
       color: var(--color-amber-600);
     }
@@ -1392,6 +1420,12 @@
   @media (hover: hover) {
     .hover\:bg-amber-700:hover {
       background-color: var(--color-amber-700);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-green-600:hover {
+      background-color: var(--color-green-600);
     }
   }
 
@@ -1682,6 +1716,14 @@
     .md\:text-xl {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+
+  @media (width >= 48rem) {
+    @media (hover: hover) {
+      .md\:group-hover\:inline-block:is(:where(.group):hover *) {
+        display: inline-block;
+      }
     }
   }
 

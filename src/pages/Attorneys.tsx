@@ -68,7 +68,7 @@ export default function Attorneys() {
       phone: "+1 (217) 703-0223",
       email: "licjuanmendoza8118@gmail.com",
       education: "William Mitchell College of Law - J.D.",
-      image: "https://images.unsplash.com/photo-1763598461615-610264129bea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXR1cmUlMjBtYWxlJTIwYXR0b3JuZXklMjBzZXJpb3VzJTIwcHJvZmVzc2lvbmFsJTIwcG9ydHJhaXQlMjBzdWl0JTIwb2ZmaWNlfGVufDF8fHx8MTc3MTAzNjMxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "figma:asset/9e615933fe0614453508c4e5d9ef813465452b61.png",
       shortBio: language === "es"
         ? "30 años de experiencia ejerciendo la profesión de derecho en Florida. Especialista en casos de inmigración en todas las áreas."
         : "30 years of experience practicing law in Florida. Specialist in immigration cases in all areas.",
