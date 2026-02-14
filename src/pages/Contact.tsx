@@ -24,8 +24,8 @@ export default function Contact() {
     try {
       // Enviar email usando EmailJS
       await emailjs.send(
-        "YOUR_SERVICE_ID", // Reemplaza con tu Service ID de EmailJS
-        "YOUR_TEMPLATE_ID", // Reemplaza con tu Template ID de EmailJS
+        "service_xee4opj", // Reemplaza con tu Service ID de EmailJS
+        "template_9z1p0tr", // Reemplaza con tu Template ID de EmailJS
         {
           from_name: formData.nombre,
           from_email: formData.email,
@@ -34,7 +34,7 @@ export default function Contact() {
           message: formData.mensaje,
           to_email: "unidosinmigracion@gmail.com",
         },
-        "YOUR_PUBLIC_KEY" // Reemplaza con tu Public Key de EmailJS
+        "ie9-MDoT_1U9qxKWs" // Reemplaza con tu Public Key de EmailJS
       );
 
       setSubmitStatus("success");
