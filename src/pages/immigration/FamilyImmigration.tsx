@@ -44,17 +44,17 @@ export default function FamilyImmigration() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-pink-900 to-red-900 text-white py-20">
+      <section className="bg-gradient-to-br from-slate-900 to-slate-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-6">
-            <Heart className="w-12 h-12" />
+            <Heart className="w-12 h-12 text-amber-600" />
             <h1 className="text-4xl md:text-5xl font-bold">
               Inmigración Familiar
             </h1>
           </div>
-          <p className="text-xl text-pink-100 max-w-3xl">
+          <p className="text-xl text-gray-300 max-w-3xl">
             Reunimos familias. Nuestro equipo te ayuda a traer a tus seres queridos 
-            a Estados Unidos a través de los diversos caminos de inmigración familiar.
+            a Estados Unidos a través de los diversos caminos de inmigración familiar disponibles.
           </p>
         </div>
       </section>
@@ -62,25 +62,25 @@ export default function FamilyImmigration() {
       {/* Categories */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Categorías de Inmigración Familiar
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Categorías de Inmigración Familiar en Estados Unidos
           </h2>
 
           <div className="space-y-8">
             {categories.map((category, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold text-pink-900 mb-4">
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-amber-600">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {category.title}
                 </h3>
                 <p className="text-gray-600 mb-6">
                   {category.description}
                 </p>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Elegibles:</h4>
+                  <h4 className="font-semibold text-slate-900 mb-3">Elegibles:</h4>
                   <ul className="space-y-2">
                     {category.eligible.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{item}</span>
                       </li>
                     ))}
@@ -91,29 +91,29 @@ export default function FamilyImmigration() {
           </div>
 
           {/* Timeline */}
-          <div className="mt-16 bg-pink-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="mt-16 bg-amber-50 p-8 rounded-lg border-2 border-amber-200">
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">
               Tiempos de Procesamiento Aproximados
             </h3>
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b pb-3">
-                <span className="font-semibold text-gray-900">Familiares Inmediatos (IR)</span>
+                <span className="font-semibold text-slate-900">Familiares Inmediatos (IR)</span>
                 <span className="text-gray-600">12-18 meses</span>
               </div>
               <div className="flex justify-between items-center border-b pb-3">
-                <span className="font-semibold text-gray-900">Primera Preferencia (F1)</span>
+                <span className="font-semibold text-slate-900">Primera Preferencia (F1)</span>
                 <span className="text-gray-600">7+ años</span>
               </div>
               <div className="flex justify-between items-center border-b pb-3">
-                <span className="font-semibold text-gray-900">Segunda Preferencia (F2)</span>
+                <span className="font-semibold text-slate-900">Segunda Preferencia (F2)</span>
                 <span className="text-gray-600">2-7 años</span>
               </div>
               <div className="flex justify-between items-center border-b pb-3">
-                <span className="font-semibold text-gray-900">Tercera Preferencia (F3)</span>
+                <span className="font-semibold text-slate-900">Tercera Preferencia (F3)</span>
                 <span className="text-gray-600">10+ años</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="font-semibold text-gray-900">Cuarta Preferencia (F4)</span>
+                <span className="font-semibold text-slate-900">Cuarta Preferencia (F4)</span>
                 <span className="text-gray-600">15+ años</span>
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function FamilyImmigration() {
 
           {/* CTA */}
           <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">
               ¿Quieres reunirte con tu familia?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -132,7 +132,7 @@ export default function FamilyImmigration() {
             </p>
             <Link 
               to="/contacto"
-              className="inline-block bg-pink-900 text-white px-8 py-3 rounded-md hover:bg-pink-800 transition"
+              className="inline-block bg-slate-900 text-white px-8 py-3 rounded-md hover:bg-slate-800 transition transform hover:scale-105 duration-300"
             >
               Consulta Gratuita
             </Link>

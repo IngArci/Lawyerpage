@@ -48,16 +48,16 @@ export default function HumanitarianVisas() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 to-indigo-900 text-white py-20">
+      <section className="bg-gradient-to-br from-slate-900 to-slate-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-6">
-            <HandHeart className="w-12 h-12" />
+            <HandHeart className="w-12 h-12 text-amber-600" />
             <h1 className="text-4xl md:text-5xl font-bold">
               Visas Humanitarias
             </h1>
           </div>
-          <p className="text-xl text-purple-100 max-w-3xl">
-            Brindamos protección legal a víctimas de crímenes, violencia doméstica, 
+          <p className="text-xl text-gray-300 max-w-3xl">
+            Brindamos protección legal en Estados Unidos a víctimas de crímenes, violencia doméstica, 
             tráfico humano y situaciones humanitarias. Tu seguridad es nuestra prioridad.
           </p>
         </div>
@@ -66,25 +66,25 @@ export default function HumanitarianVisas() {
       {/* Visa Types */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Opciones de Protección Humanitaria
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            Opciones de Protección Humanitaria en Estados Unidos
           </h2>
 
           <div className="space-y-8">
             {visaTypes.map((visa, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold text-purple-900 mb-4">
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow border-l-4 border-amber-600">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {visa.title}
                 </h3>
                 <p className="text-gray-600 mb-6">
                   {visa.description}
                 </p>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Beneficios:</h4>
+                  <h4 className="font-semibold text-slate-900 mb-3">Beneficios:</h4>
                   <ul className="space-y-2">
                     {visa.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{benefit}</span>
                       </li>
                     ))}
@@ -95,8 +95,8 @@ export default function HumanitarianVisas() {
           </div>
 
           {/* Confidentiality Notice */}
-          <div className="mt-16 bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
+          <div className="mt-16 bg-amber-50 border-l-4 border-amber-600 p-6 rounded">
+            <h3 className="text-xl font-bold text-slate-900 mb-3">
               🔒 Confidencialidad Garantizada
             </h3>
             <p className="text-gray-700 mb-3">
@@ -111,18 +111,18 @@ export default function HumanitarianVisas() {
           </div>
 
           {/* Support Resources */}
-          <div className="mt-12 bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="mt-12 bg-white p-8 rounded-lg shadow-md border-t-4 border-slate-900">
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">
               Recursos de Apoyo
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Línea Nacional de Violencia Doméstica</h4>
+                <h4 className="font-semibold text-slate-900 mb-2">Línea Nacional de Violencia Doméstica</h4>
                 <p className="text-gray-600 mb-2">1-800-799-7233 (24/7)</p>
                 <p className="text-sm text-gray-500">Ayuda confidencial para víctimas de abuso doméstico</p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Línea Nacional contra el Tráfico Humano</h4>
+                <h4 className="font-semibold text-slate-900 mb-2">Línea Nacional contra el Tráfico Humano</h4>
                 <p className="text-gray-600 mb-2">1-888-373-7888 (24/7)</p>
                 <p className="text-sm text-gray-500">Asistencia para víctimas de trata de personas</p>
               </div>
@@ -131,7 +131,7 @@ export default function HumanitarianVisas() {
 
           {/* CTA */}
           <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">
               Estamos aquí para ayudarte
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -140,7 +140,7 @@ export default function HumanitarianVisas() {
             </p>
             <Link 
               to="/contacto"
-              className="inline-block bg-purple-900 text-white px-8 py-3 rounded-md hover:bg-purple-800 transition"
+              className="inline-block bg-slate-900 text-white px-8 py-3 rounded-md hover:bg-slate-800 transition transform hover:scale-105 duration-300"
             >
               Consulta Confidencial
             </Link>
