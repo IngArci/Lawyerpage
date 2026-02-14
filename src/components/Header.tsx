@@ -43,7 +43,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <img src="src/public/logo.png" alt="Unidos Por Inmigración" className="h-16 md:h-20 lg:h-24 object-contain" />
+            <img src="/logo.png" alt="Unidos Por Inmigración" className="h-16 md:h-20 lg:h-24 object-contain" />
           </Link>
 
           {/* Desktop Menu */}
