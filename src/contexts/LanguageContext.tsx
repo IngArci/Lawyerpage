@@ -58,6 +58,10 @@ const translations = {
     "home.cta.button1": "Agendar Consulta",
     "home.cta.button2": "Conoce a Nuestro Equipo",
     
+    // Testimonials
+    "home.testimonials.title": "Lo que dicen nuestros clientes",
+    "home.testimonials.subtitle": "Miles de familias han confiado en nosotros para hacer realidad sus sueños",
+    
     // Know Your Rights Page
     "rights.hero.title": "Conoce tus Derechos",
     "rights.hero.subtitle": "Es fundamental que conozcas tus derechos como inmigrante en Estados Unidos. Esta información puede protegerte en situaciones críticas.",
@@ -156,6 +160,10 @@ const translations = {
     "home.cta.subtitle": "Don't wait any longer to make your dreams come true. Contact us today and take the first step toward your future in the United States.",
     "home.cta.button1": "Schedule Consultation",
     "home.cta.button2": "Meet Our Team",
+    
+    // Testimonials
+    "home.testimonials.title": "What Our Clients Say",
+    "home.testimonials.subtitle": "Thousands of families have trusted us to make their dreams come true",
     
     // Know Your Rights Page
     "rights.hero.title": "Know Your Rights",
