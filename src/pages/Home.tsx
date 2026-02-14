@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import teamImage from "figma:asset/5faa74f145a744201b8ca8357e9ef502d56e468f.png";
 
 export default function Home() {
   const { t, language } = useLanguage();
@@ -160,10 +161,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission and Vision Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* Our Team Professional Section */}
+      <section className="py-16 md:py-24 bg-white border-b-4 border-amber-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              {language === "es" ? "Nuestro Equipo Profesional" : "Our Professional Team"}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {language === "es"
+                ? "Un equipo dedicado de expertos en inmigración comprometidos con su éxito"
+                : "A dedicated team of immigration experts committed to your success"}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative overflow-hidden rounded-xl shadow-2xl"
+          >
+            <img
+              src={teamImage}
+              alt="Unidos Por Inmigración Team"
+              className="w-full h-auto object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent"></div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center mt-8"
+          >
+            <Link
+              to="/abogados"
+              className="inline-block bg-slate-900 text-white px-8 py-3 rounded-md font-semibold hover:bg-slate-800 transition transform hover:scale-105 duration-300"
+            >
+              {language === "es" ? "Conoce a Nuestros Abogados" : "Meet Our Attorneys"}
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Mission and Vision Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              {language === "es" ? "Nuestra Filosofía" : "Our Philosophy"}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {language === "es" 
+                ? "Comprometidos con la excelencia y dedicados a proteger sus derechos"
+                : "Committed to excellence and dedicated to protecting your rights"}
+            </p>
+          </motion.div>
+
+          <motion.div
             className="grid lg:grid-cols-2 gap-12"
             variants={staggerContainer}
             initial="initial"
@@ -171,7 +241,7 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
           >
             {/* Mission */}
-            <motion.div 
+            <motion.div
               className="relative overflow-hidden rounded-lg shadow-xl"
               variants={fadeInUp}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
@@ -199,7 +269,7 @@ export default function Home() {
             </motion.div>
 
             {/* Vision */}
-            <motion.div 
+            <motion.div
               className="relative overflow-hidden rounded-lg shadow-xl"
               variants={fadeInUp}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
@@ -230,9 +300,9 @@ export default function Home() {
       </section>
 
       {/* Services Section with Images */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -247,7 +317,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid md:grid-cols-3 gap-8"
             variants={staggerContainer}
             initial="initial"
@@ -288,14 +358,14 @@ export default function Home() {
             ))}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Link 
+            <Link
               to="/contacto"
               className="inline-block bg-slate-900 text-white px-8 py-3 rounded-md font-semibold hover:bg-slate-800 transition transform hover:scale-105 duration-300"
             >
@@ -308,7 +378,7 @@ export default function Home() {
       {/* Testimonials Carousel */}
       <section className="py-16 md:py-24 bg-slate-900 text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -324,7 +394,7 @@ export default function Home() {
           </motion.div>
 
           <div className="relative">
-            <motion.div 
+            <motion.div
               className="bg-slate-800 rounded-lg p-8 md:p-12"
               key={currentTestimonial}
               initial={{ opacity: 0, x: 100 }}
@@ -333,7 +403,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <div className="flex flex-col md:flex-row items-center gap-8">
-                <motion.div 
+                <motion.div
                   className="flex-shrink-0"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
@@ -345,7 +415,7 @@ export default function Home() {
                     className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-amber-600"
                   />
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="flex-1 text-center md:text-left"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -364,8 +434,8 @@ export default function Home() {
                     </p>
                     <div className="flex gap-1 mt-2 justify-center md:justify-start">
                       {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                        <motion.span 
-                          key={i} 
+                        <motion.span
+                          key={i}
                           className="text-amber-600 text-xl"
                           initial={{ opacity: 0, scale: 0 }}
                           animate={{ opacity: 1, scale: 1 }}
@@ -437,15 +507,15 @@ export default function Home() {
               {t("home.consultation.subtitle")}
             </p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-col sm:flex-row gap-6 justify-center mb-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
           >
-            <motion.a 
+            <motion.a
               href="tel:+1412514827"
               className="flex items-center gap-3 justify-center text-gray-700 hover:text-slate-900 transition"
               variants={fadeInUp}
@@ -459,7 +529,7 @@ export default function Home() {
                 <div className="text-lg">412-514-827</div>
               </div>
             </motion.a>
-            <motion.a 
+            <motion.a
               href="mailto:unidosinmigracion@gmail.com"
               className="flex items-center gap-3 justify-center text-gray-700 hover:text-slate-900 transition"
               variants={fadeInUp}
@@ -481,7 +551,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Link 
+            <Link
               to="/contacto"
               className="inline-block bg-amber-600 text-white px-10 py-4 rounded-md font-semibold hover:bg-amber-700 transition text-lg transform hover:scale-105 duration-300"
             >
@@ -507,7 +577,7 @@ export default function Home() {
               {t("home.cta.subtitle")}
             </p>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={staggerContainer}
             initial="initial"
@@ -515,7 +585,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <motion.div variants={fadeInUp}>
-              <Link 
+              <Link
                 to="/contacto"
                 className="inline-block bg-amber-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-amber-700 transition transform hover:scale-105 duration-300"
               >
@@ -523,7 +593,7 @@ export default function Home() {
               </Link>
             </motion.div>
             <motion.div variants={fadeInUp}>
-              <Link 
+              <Link
                 to="/abogados"
                 className="inline-block border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-slate-900 transition transform hover:scale-105 duration-300"
               >
