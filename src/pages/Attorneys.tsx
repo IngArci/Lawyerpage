@@ -3,6 +3,8 @@ import { Mail, Phone, MapPin, GraduationCap } from "lucide-react";
 import { Link } from "react-router";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "motion/react";
+import juanImg from "../assets/abogado-juan-mendoza.jpeg";
+
 
 export default function Attorneys() {
   const { language } = useLanguage();
@@ -68,7 +70,7 @@ export default function Attorneys() {
       phone: "+1 (217) 703-0223",
       email: "licjuanmendoza8118@gmail.com",
       education: "William Mitchell College of Law - J.D.",
-      image: "figma:asset/9e615933fe0614453508c4e5d9ef813465452b61.png",
+      image: juanImg,
       shortBio: language === "es"
         ? "30 años de experiencia ejerciendo la profesión de derecho en Florida. Especialista en casos de inmigración en todas las áreas."
         : "30 years of experience practicing law in Florida. Specialist in immigration cases in all areas.",
