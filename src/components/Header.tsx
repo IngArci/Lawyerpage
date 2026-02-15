@@ -97,7 +97,7 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-200">
                 <Link to="/abogados" className="block px-4 py-2 text-gray-700 hover:bg-slate-50 hover:text-slate-900 font-semibold whitespace-nowrap">
-                  Ver Todos
+                  {language === "es" ? "Ver Todos" : "View All"}
                 </Link>
                 <div className="border-t my-1"></div>
                 {attorneys.map((attorney) => (
@@ -179,7 +179,7 @@ export default function Header() {
                       {t("nav.inmigracion.asilo")}
                     </Link>
                     <Link to="/inmigracion/residencias" onClick={() => setMobileMenuOpen(false)} className="block text-gray-600 hover:text-slate-900">
-                      {language === "es" ? "Residencias (Green Card)" : "Residency (Green Card)"}
+                      {language === "es" ? "Residencias" : "Residency"}
                     </Link>
                   </div>
                 )}
