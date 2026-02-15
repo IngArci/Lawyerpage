@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export function WhatsAppButton() {
   const phoneNumber = "14152514827"; // +1 (415) 251-4827
-  const message = "Hello! I would like a free consultation about my immigration status.";
+  const message = "Hello! I'm coming from your website and I would like to request a free consultation regarding my immigration status.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (

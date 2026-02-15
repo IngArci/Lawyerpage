@@ -5,26 +5,32 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import teamImage from "figma:asset/5faa74f145a744201b8ca8357e9ef502d56e468f.png";
+import mariaImg from "../assets/persona1.jpg";
+import carlosImg from "../assets/persona2.jpg";
+import anaImg from "../assets/persona3.jpg";
+import joseImg from "../assets/persona4.jpg";
+import valentinaImg from "../assets/persona5.jpg";
+import luismg from "../assets/persona6.jpg";
 
 export default function Home() {
   const { t, language } = useLanguage();
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const services = [
-    { 
-      title: t("nav.inmigracion.visasEmpleo"), 
+    {
+      title: t("nav.inmigracion.visasEmpleo"),
       path: "/inmigracion/visas-empleo",
       description: t("home.services.employment"),
       image: "https://images.unsplash.com/photo-1762341119317-fb5417c18407?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG9mZmljZSUyMGRlc2t8ZW58MXx8fHwxNzcxMDM0OTI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
-    { 
-      title: t("nav.inmigracion.familiar"), 
+    {
+      title: t("nav.inmigracion.familiar"),
       path: "/inmigracion/familiar",
       description: t("home.services.family"),
       image: "https://images.unsplash.com/photo-1596510914965-9ae08acae566?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwZmFtaWx5JTIwaGFwcHklMjB0b2dldGhlcnxlbnwxfHx8fDE3NzEwMzQ5Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
-    { 
-      title: t("nav.inmigracion.humanitarias"), 
+    {
+      title: t("nav.inmigracion.humanitarias"),
       path: "/inmigracion/humanitarias",
       description: t("home.services.humanitarian"),
       image: "https://images.unsplash.com/photo-1696861273647-92dfe8bb697c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbW1pZ3JhdGlvbiUyMGxhdyUyMG9mZmljZSUyMHByb2Zlc3Npb25hbCUyMGhhbmRzaGFrZXxlbnwxfHx8fDE3NzEwMzQ5Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
@@ -33,33 +39,61 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "María García",
-      location: "Miami, FL",
-      text: language === "es" 
-        ? "Gracias a Unidos Por Inmigración, mi familia finalmente pudo reunirse en Estados Unidos. Su profesionalismo y dedicación fueron excepcionales. Siempre estuvieron disponibles para responder nuestras preguntas y nos guiaron en cada paso del proceso."
-        : "Thanks to Unidos Por Inmigración, my family was finally able to reunite in the United States. Their professionalism and dedication were exceptional. They were always available to answer our questions and guided us through every step of the process.",
-      image: "",
-      rating: 5
-    },
-    {
-      name: "Carlos Rodríguez",
-      location: "Houston, TX",
+      name: "María Fernanda López",
+      location: "Orlando, FL",
       text: language === "es"
-        ? "Mi caso de asilo era complejo, pero el equipo de Unidos Por Inmigración luchó incansablemente por mí. Su experiencia y conocimiento del sistema legal de inmigración fue fundamental para ganar mi caso. Los recomiendo al 100%."
-        : "My asylum case was complex, but the Unidos Por Inmigración team fought tirelessly for me. Their experience and knowledge of the immigration legal system was fundamental to winning my case. I recommend them 100%.",
-      image: "",
+        ? "Después de años separada de mi esposo, Unidos Por Inmigración nos ayudó a completar el proceso de petición familiar con total claridad y acompañamiento. Agradezco especialmente al abogado Carlos E. Castro por su dedicación y paciencia en cada etapa. Hoy estamos finalmente juntos en Estados Unidos."
+        : "After years of being separated from my husband, Unidos Por Inmigración helped us complete our family petition process with clarity and constant support. I am especially grateful to attorney Carlos E. Castro for his dedication and patience throughout every stage. Today we are finally together in the United States.",
+      image: mariaImg,
+      rating: 4
+    },
+    {
+      name: "Carlos Andrés Rodríguez",
+      location: "Dallas, TX",
+      text: language === "es"
+        ? "Mi proceso de asilo fue largo y lleno de incertidumbre, pero el equipo legal me explicó cada detalle y me preparó muy bien para mi entrevista. La abogada Liliana Ivette Vásquez estuvo pendiente de mi caso y me dio mucha confianza. Gracias a ellos logramos una decisión favorable."
+        : "My asylum process was long and uncertain, but the legal team explained every detail and prepared me thoroughly for my interview. Attorney Liliana Ivette Vásquez closely followed my case and gave me great confidence. Thanks to their support, we received a favorable decision.",
+      image: carlosImg,
       rating: 5
     },
     {
-      name: "Ana Martínez",
+      name: "Ana Lucía Martínez",
       location: "Los Angeles, CA",
       text: language === "es"
-        ? "Obtuve mi visa de trabajo gracias a su excelente asesoría. El proceso fue más rápido de lo que esperaba y siempre me mantuvieron informada. Su atención personalizada hace toda la diferencia. ¡Estoy muy agradecida!"
-        : "I obtained my work visa thanks to their excellent advice. The process was faster than I expected and they always kept me informed. Their personalized attention makes all the difference. I'm very grateful!",
-      image: "",
+        ? "Gracias a su asesoría profesional, pude obtener mi visa de trabajo y comenzar una nueva etapa en mi carrera. El abogado Carlos E. Castro siempre estuvo atento a cada documento y plazo. Me sentí acompañada en todo momento."
+        : "Thanks to their professional guidance, I was able to obtain my work visa and start a new chapter in my career. Attorney Carlos E. Castro carefully reviewed every document and deadline. I felt supported at every step.",
+      image: anaImg,
+      rating: 4
+    },
+    {
+      name: "José Manuel Herrera",
+      location: "Chicago, IL",
+      text: language === "es"
+        ? "Llegué a Estados Unidos con muchas dudas sobre mi estatus migratorio. Unidos Por Inmigración me ayudó a solicitar el TPS y posteriormente iniciar mi ajuste de estatus. Agradezco profundamente a la abogada Liliana Ivette Vásquez por su trato humano y transparencia."
+        : "I arrived in the United States with many doubts about my immigration status. Unidos Por Inmigración helped me apply for TPS and later begin my adjustment of status process. I sincerely thank attorney Liliana Ivette Vásquez for her honesty and compassionate approach.",
+      image: joseImg,
       rating: 5
+    },
+    {
+      name: "Valentina Rojas",
+      location: "New York, NY",
+      text: language === "es"
+        ? "Mi residencia permanente fue aprobada más rápido de lo que esperaba. El equipo siempre respondió mis correos y llamadas con paciencia y profesionalismo. Gracias al abogado Carlos E. Castro y a todo el equipo por su compromiso."
+        : "My permanent residency was approved faster than I expected. The team always responded to my emails and calls with patience and professionalism. Special thanks to attorney Carlos E. Castro and the entire team for their commitment.",
+      image: valentinaImg,
+      rating: 5
+    },
+    {
+      name: "Luis Fernando Castillo",
+      location: "Phoenix, AZ",
+      text: language === "es"
+        ? "Gracias a la excelente preparación para mi entrevista migratoria, pude obtener mi permiso de trabajo y avanzar en mi proceso legal. La abogada Liliana Ivette Vásquez me brindó orientación clara y seguridad en cada paso."
+        : "Thanks to the excellent preparation for my immigration interview, I was able to obtain my work permit and move forward with my legal process. Attorney Liliana Ivette Vásquez provided clear guidance and reassurance at every step.",
+      image: luismg,
+      rating: 4
     }
   ];
+
 
   // Auto-advance testimonials
   useEffect(() => {
@@ -103,7 +137,7 @@ export default function Home() {
     <>
       {/* Hero Section with Image */}
       <section className="relative bg-slate-900 text-white overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute inset-0"
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -116,13 +150,13 @@ export default function Home() {
           />
         </motion.div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <motion.div 
+          <motion.div
             className="max-w-3xl"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <motion.h1 
+            <motion.h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -130,7 +164,7 @@ export default function Home() {
             >
               {t("home.hero.title")}
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-xl text-gray-300 mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -138,19 +172,19 @@ export default function Home() {
             >
               {t("home.hero.subtitle")}
             </motion.p>
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
             >
-              <Link 
+              <Link
                 to="/contacto"
                 className="bg-amber-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-amber-700 transition text-center transform hover:scale-105 duration-300"
               >
                 {t("home.hero.cta1")}
               </Link>
-              <a 
+              <a
                 href="tel:+1412514827"
                 className="border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-slate-900 transition text-center transform hover:scale-105 duration-300"
               >
@@ -227,7 +261,7 @@ export default function Home() {
               {language === "es" ? "Nuestra Filosofía" : "Our Philosophy"}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {language === "es" 
+              {language === "es"
                 ? "Comprometidos con la excelencia y dedicados a proteger sus derechos"
                 : "Committed to excellence and dedicated to protecting your rights"}
             </p>
@@ -478,9 +512,8 @@ export default function Home() {
                 <motion.button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition ${
-                    index === currentTestimonial ? 'bg-amber-600' : 'bg-gray-600'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition ${index === currentTestimonial ? 'bg-amber-600' : 'bg-gray-600'
+                    }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
