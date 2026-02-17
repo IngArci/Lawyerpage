@@ -3,10 +3,10 @@ import { Mail, Phone, MapPin, GraduationCap, Award, Briefcase, ArrowLeft } from 
 import { Link, useParams, Navigate } from "react-router";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "motion/react";
-import carlosImg from "../assets/abogado-carlos.jpeg";
+import juanImg from "../assets/abogado-carlos.jpeg";
 import alejandroImg from "../assets/abogado-alejandro.jpeg";
 import lilianaImg from "../assets/abogado-liliana.jpeg";
-import juanImg from "../assets/abogado-juan.jpeg";
+import carlosImg from "../assets/abogado-juan.jpeg";
 
 export default function AttorneyDetail() {
   const { id } = useParams();
