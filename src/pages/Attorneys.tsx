@@ -7,6 +7,7 @@ import juanImg from "../assets/abogado-carlos.jpeg";
 import alejandroImg from "../assets/abogado-alejandro.jpeg";
 import lilianaImg from "../assets/abogado-liliana.jpeg";
 import carlosImg from "../assets/abogado-juan.jpeg";
+import angelicaImg from "../assets/abogado-angelica.jpeg";
 
 export default function Attorneys() {
   const { language } = useLanguage();
@@ -22,10 +23,10 @@ export default function Attorneys() {
       email: "Carlose.casstro@gmail.com",
       education: "Texas Southern University - J.D.",
       image: carlosImg,
-      shortBio: language === "es" 
-        ? "Dedicado a ayudar a quienes residen en Estados Unidos con sus problemas de inmigración. Hijo de inmigrantes hondureños, comprende plenamente la difícil situación de los inmigrantes." 
+      shortBio: language === "es"
+        ? "Dedicado a ayudar a quienes residen en Estados Unidos con sus problemas de inmigración. Hijo de inmigrantes hondureños, comprende plenamente la difícil situación de los inmigrantes."
         : "Dedicated to helping those residing in the United States with their immigration issues. Son of Honduran immigrants, he fully understands the difficult situation of immigrants.",
-      specialties: language === "es" 
+      specialties: language === "es"
         ? ["Patrocinio de Trabajadores", "Defensa contra Deportación", "Asilo Político"]
         : ["Worker Sponsorship", "Deportation Defense", "Political Asylum"]
     },
@@ -79,7 +80,28 @@ export default function Attorneys() {
       specialties: language === "es"
         ? ["Inmigración", "Derecho de Familia", "Casos Civiles"]
         : ["Immigration", "Family Law", "Civil Cases"]
+    },
+    {
+      id: "angelica-tovar",
+      name: "Lic. Angélica Tovar Hastings",
+      title: language === "es" ? "Abogada de Inmigración" : "Immigration Attorney",
+      state: "Minnesota",
+      license: "24060995",
+      phone: "+1 (639) 395-5891",
+      email: "tovarhastingslawyer@gmail.com",
+      education: "University of St. Thomas School of Law",
+      image: angelicaImg,
+
+      shortBio: language === "es"
+        ? "Abogada con más de 30 años de experiencia, reconocida por su estrategia legal sólida, rigor técnico y compromiso absoluto con la protección de los derechos de sus clientes."
+        : "Attorney with over 30 years of experience, recognized for her strong legal strategy, technical rigor, and unwavering commitment to protecting her clients' rights.",
+
+      specialties: language === "es"
+        ? ["Inmigración", "Derecho de Familia", "Procesos Humanitarios", "Casos Civiles"]
+        : ["Immigration", "Family Law", "Humanitarian Processes", "Civil Cases"]
     }
+
+
   ];
 
   const staggerContainer = {
@@ -101,7 +123,7 @@ export default function Attorneys() {
       {/* Hero Section */}
       <section className="bg-slate-900 text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,7 +133,7 @@ export default function Attorneys() {
               {language === "es" ? "Nuestros Abogados" : "Our Attorneys"}
             </h1>
             <p className="text-xl text-gray-300">
-              {language === "es" 
+              {language === "es"
                 ? "Expertos comprometidos con la defensa de sus derechos migratorios"
                 : "Experts committed to defending your immigration rights"}
             </p>
@@ -122,7 +144,7 @@ export default function Attorneys() {
       {/* Attorneys Grid */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="grid md:grid-cols-2 gap-8"
             variants={staggerContainer}
             initial="initial"
@@ -152,10 +174,10 @@ export default function Attorneys() {
                       />
                     </motion.div>
                   </Link>
-                  
+
                   <div className="md:w-3/5 p-6 flex flex-col justify-between">
                     <div>
-                      <Link 
+                      <Link
                         to={`/abogados/${attorney.id}`}
                         className="group"
                       >
@@ -164,7 +186,7 @@ export default function Attorneys() {
                         </h2>
                       </Link>
                       <p className="text-amber-600 font-semibold mb-4">{attorney.title}</p>
-                      
+
                       <div className="space-y-2 mb-4 text-sm text-gray-600">
                         <div className="flex items-center gap-2">
                           <MapPin className="w-4 h-4 text-slate-900 flex-shrink-0" />
@@ -175,14 +197,14 @@ export default function Attorneys() {
                           <span>{attorney.education}</span>
                         </div>
                       </div>
-                      
+
                       <p className="text-gray-700 mb-4 line-clamp-3">
                         {attorney.shortBio}
                       </p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
                         {attorney.specialties.map((specialty, index) => (
-                          <span 
+                          <span
                             key={index}
                             className="px-3 py-1 bg-amber-50 text-amber-700 text-xs rounded-full"
                           >
@@ -224,8 +246,8 @@ export default function Attorneys() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {language === "es" 
-                ? "¿Necesita Asesoría Legal?" 
+              {language === "es"
+                ? "¿Necesita Asesoría Legal?"
                 : "Need Legal Advice?"}
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -233,7 +255,7 @@ export default function Attorneys() {
                 ? "Contáctenos hoy para una consulta con uno de nuestros expertos"
                 : "Contact us today for a consultation with one of our experts"}
             </p>
-            <Link 
+            <Link
               to="/contacto"
               className="inline-block bg-amber-600 text-white px-10 py-4 rounded-md font-semibold hover:bg-amber-700 transition text-lg transform hover:scale-105 duration-300"
             >

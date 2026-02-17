@@ -7,6 +7,7 @@ import juanImg from "../assets/abogado-carlos.jpeg";
 import alejandroImg from "../assets/abogado-alejandro.jpeg";
 import lilianaImg from "../assets/abogado-liliana.jpeg";
 import carlosImg from "../assets/abogado-juan.jpeg";
+import angelicaImg from "../assets/abogado-angelica.jpeg";
 
 export default function AttorneyDetail() {
   const { id } = useParams();
@@ -93,7 +94,60 @@ export default function AttorneyDetail() {
       experience: language === "es"
         ? ["30 años de experiencia en Florida", "Miembro del Federal District Court", "Miembro del Eleventh Circuit Court of Appeals", "Especialista en múltiples áreas legales", "Amplia experiencia en inmigración"]
         : ["30 years of experience in Florida", "Member of Federal District Court", "Member of Eleventh Circuit Court of Appeals", "Specialist in multiple legal areas", "Extensive immigration experience"]
+    },
+    "angelica-tovar": {
+      name: "Lic. Angélica Tovar Hastings",
+      title: language === "es" ? "Abogada de Inmigración" : "Immigration Attorney",
+      state: "Minnesota",
+      license: "24060995",
+      phone: "+1 (639) 395-5891",
+      email: "tovarhastingslawyer@gmail.com",
+      education: "University of St. Thomas School of Law",
+      degree: "Juris Doctor (J.D.)",
+      additionalEducation: "University of California - USC Gould School of Law",
+      image: angelicaImg,
+
+      bio: language === "es"
+        ? "Confiar un asunto legal a la Lic. Angélica Tovar Hastings es optar por representación con visión estratégica, firmeza y alto estándar profesional. Su ejercicio jurídico se distingue por la combinación de rigor técnico, análisis profundo y una defensa estructurada orientada a resultados concretos.\n\nGraduada del William Mitchell College of Law, donde obtuvo su título de Juris Doctor (J.D.), y con formación adicional en Cal Poly University Pomona en Ingeniería Aeroespacial, Angélica ha desarrollado un perfil profesional integral que combina precisión analítica, dominio normativo y comprensión humana.\n\nCuenta con más de 30 años de experiencia en el ejercicio del derecho, con enfoque en derecho migratorio, procesos humanitarios, derecho de familia y casos civiles. Cada caso es abordado con planificación meticulosa, argumentación sólida y absoluta confidencialidad.\n\nSe mantiene en constante actualización respecto a legislación, precedentes y procedimientos, garantizando estrategias jurídicamente sustentables y orientadas a la protección efectiva de los derechos de sus clientes. Su compromiso, liderazgo y excelencia profesional brindan seguridad y confianza en cada proceso legal."
+        : "Entrusting a legal matter to Attorney Angélica Tovar Hastings means choosing representation with strategic vision, strength, and the highest professional standards. Her legal practice is distinguished by technical rigor, deep analysis, and structured defense focused on achieving concrete results.\n\nShe earned her Juris Doctor (J.D.) from William Mitchell College of Law and also holds a Bachelor of Science in Aerospace Engineering from Cal Poly University Pomona, reflecting her strong analytical and technical foundation.\n\nWith over 30 years of legal experience, she focuses on immigration law, humanitarian processes, family law, and civil cases. Each case is handled with meticulous planning, strong legal argumentation, and complete confidentiality.\n\nShe remains continuously updated on legislation, precedents, and procedures, ensuring legally sound and sustainable strategies. Her professionalism, leadership, and dedication provide clients with confidence, protection, and legal certainty.",
+
+      specialties: language === "es"
+        ? [
+          "Derecho de Inmigración",
+          "Procesos Humanitarios",
+          "Derecho de Familia",
+          "Casos Civiles",
+          "Representación Legal Estratégica",
+          "Protección de Derechos"
+        ]
+        : [
+          "Immigration Law",
+          "Humanitarian Processes",
+          "Family Law",
+          "Civil Cases",
+          "Strategic Legal Representation",
+          "Rights Protection"
+        ],
+
+      experience: language === "es"
+        ? [
+          "Más de 30 años de experiencia legal",
+          "Juris Doctor (J.D.) - William Mitchell College of Law",
+          "Formación en Ingeniería Aeroespacial - Cal Poly University Pomona",
+          "Especialista en derecho migratorio",
+          "Experiencia en procesos humanitarios y derecho de familia",
+          "Representación legal estratégica orientada a resultados"
+        ]
+        : [
+          "Over 30 years of legal experience",
+          "Juris Doctor (J.D.) - William Mitchell College of Law",
+          "Aerospace Engineering background - Cal Poly University Pomona",
+          "Specialist in immigration law",
+          "Experience in humanitarian and family law cases",
+          "Strategic legal representation focused on results"
+        ]
     }
+
   };
 
   const attorney = id ? attorneysData[id] : null;
@@ -113,8 +167,8 @@ export default function AttorneyDetail() {
       {/* Back Button */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link 
-            to="/abogados" 
+          <Link
+            to="/abogados"
             className="inline-flex items-center gap-2 text-gray-600 hover:text-slate-900 transition"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -128,7 +182,7 @@ export default function AttorneyDetail() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Photo */}
-            <motion.div 
+            <motion.div
               className="md:col-span-1"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -144,7 +198,7 @@ export default function AttorneyDetail() {
             </motion.div>
 
             {/* Info */}
-            <motion.div 
+            <motion.div
               className="md:col-span-2"
               {...fadeInUp}
             >
@@ -181,8 +235,8 @@ export default function AttorneyDetail() {
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg">
                   <Phone className="w-5 h-5 text-amber-600 flex-shrink-0" />
-                  <a 
-                    href={`tel:${attorney.phone}`} 
+                  <a
+                    href={`tel:${attorney.phone}`}
                     className="text-lg text-slate-900 hover:text-amber-600 transition"
                   >
                     {attorney.phone}
@@ -190,8 +244,8 @@ export default function AttorneyDetail() {
                 </div>
                 <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg">
                   <Mail className="w-5 h-5 text-amber-600 flex-shrink-0" />
-                  <a 
-                    href={`mailto:${attorney.email}`} 
+                  <a
+                    href={`mailto:${attorney.email}`}
                     className="text-lg text-slate-900 hover:text-amber-600 transition break-all"
                   >
                     {attorney.email}
@@ -320,8 +374,8 @@ export default function AttorneyDetail() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {language === "es" 
-                ? "¿Listo para comenzar su caso?" 
+              {language === "es"
+                ? "¿Listo para comenzar su caso?"
                 : "Ready to start your case?"}
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -339,7 +393,7 @@ export default function AttorneyDetail() {
                 {language === "es" ? "Llamar Ahora" : "Call Now"}
               </motion.a>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link 
+                <Link
                   to="/contacto"
                   className="inline-block border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-slate-900 transition"
                 >

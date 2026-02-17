@@ -16,6 +16,7 @@ export default function Header() {
     { id: "alejandro-camacho", name: "Dr. Alejandro Camacho" },
     { id: "liliana-vasquez", name: "Liliana Ivette Vásquez" },
     { id: "juan-mendoza", name: "Lic. Juan José Mendoza" },
+    { id: "angelica-tovar", name: "Lic. Angélica Tovar Hastings" },
   ];
 
   const toggleLanguage = () => {
